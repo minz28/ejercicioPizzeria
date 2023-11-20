@@ -19,7 +19,7 @@ Route::get('/', [LoginController::class, 'loginGet'])->name('login');
 Route::post('/', [LoginController::class, 'loginPost']);
 Route::get('/logout', [LoginController::class, 'logout']);
 Route::controller(SolicitudController::class)->prefix('solicitudes')->group(function(){
-    Route::get('/', 'listar')->name('solicitudes.listar');
-    Route::get('/ingresar', 'addSolicitudGet');
-    Route::post('/ingresar', 'addSolicitudPost');
+    Route::middleware('auth')->get('/', 'listar')->name('solicitudes.listar');
+    Route::middleware('auth')->get('/ingresar', 'addSolicitudGet');
+    Route::middleware('auth')->post('/ingresar', 'addSolicitudPost');
 });

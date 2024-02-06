@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     
     <title>@yield('titulo')</title>
 </head>
@@ -19,10 +19,10 @@
             <div class="col-2">
                 <ul>
                     <li class="list-group-item"><h3>Solicitudes</h3></li>
-                    <li class="list-group-item"><a href="/solicitudes/ingresar">Ingresar solicitud</a></li>
-                    <li class="list-group-item"><a href="/solicitudes/">Listar solicitud</a></li>
+                    <li class="list-group-item"><a href="{{url('/solicitudes/ingresar')}}">Ingresar solicitud</a></li>
+                    <li class="list-group-item"><a href="{{url('/solicitudes/')}}">Listar solicitud</a></li>
                     <hr>
-                    <li class="list-group-item"><a href="/logout">Cerrar sesión</a></li>
+                    <li class="list-group-item"><a href="{{url('/logout')}}">Cerrar sesión</a></li>
                 </ul>
             </div>
             @endauth
@@ -38,6 +38,6 @@
         </div>
     </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
